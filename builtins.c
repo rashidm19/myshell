@@ -286,7 +286,7 @@ ssize_t bn_cat(char** tokens){
         display_error("ERROR: Cannot open file", "");
     } 
     else{
-        char *ch;
+        char *ch = NULL;
         while ((ch =fgets(ch, sizeof(file), file))){
             display_message(ch);
             // free(ch2)
