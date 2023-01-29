@@ -12,7 +12,7 @@
 
 
 int main(int argc, char* argv[]) {
-    char *prompt = "mysh$ "; // TODO Step 1, Uncomment this.
+    char *prompt = "mysh$ "; 
 
     char input_buf[MAX_STR_LEN + 1];
     input_buf[MAX_STR_LEN] = '\0';
@@ -29,19 +29,11 @@ int main(int argc, char* argv[]) {
    
 
     while (1) {
-        // Prompt and input tokenization
-
-        // TODO Step 2:
-
         display_message(prompt);
-        // Display the prompt via the display_message function.
 
 
         int ret = get_input(input_buf);
         size_t token_count = tokenize_input(input_buf, token_arr);
-        // Clean exitmak
-        // Продлил до 60, может потом поменяю макс число.
-        // if (ret != -1 && ((strncmp("exit", token_arr[0], 64) == 0))) {
 
         if (token_count == 0){
                 continue;
